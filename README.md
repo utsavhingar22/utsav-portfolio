@@ -144,10 +144,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-- **Email**: utsav.hingar@email.com
-- **LinkedIn**: [linkedin.com/in/utsavhingar](https://linkedin.com/in/utsavhingar)
-- **GitHub**: [github.com/utsavhingar](https://github.com/utsavhingar)
-- **Twitter**: [twitter.com/utsavhingar](https://twitter.com/utsavhingar)
+- **Email**: utsav.hingar22@gmail.com
+- **LinkedIn**: [linkedin.com/in/utsavhingar](https://linkedin.com/in/utsavhingar22)
+- **GitHub**: [github.com/utsavhingar](https://github.com/utsavhingar22)
+- **Twitter**: [twitter.com/utsavhingar](https://twitter.com/utsavhingar22)
 
 ---
 
