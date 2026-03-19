@@ -4,10 +4,10 @@ import { FaUser, FaGraduationCap, FaMapMarkerAlt, FaMobile, FaLightbulb } from '
 
 const About: React.FC = () => {
   const quickFacts = [
-    { icon: FaUser, label: 'Experience', value: '3+ Years', color: 'text-primary-400' },
-    { icon: FaMapMarkerAlt, label: 'Location', value: 'Bengaluru, India', color: 'text-accent-400' },
-    { icon: FaGraduationCap, label: 'Education', value: 'B.Tech CSE', color: 'text-success-400' },
-    { icon: FaMobile, label: 'Specialty', value: 'Flutter, Android, iOS', color: 'text-warning-400' },
+    { icon: FaUser, label: 'Experience', value: '3+ Years', color: 'text-primary-600 dark:text-primary-400' },
+    { icon: FaMapMarkerAlt, label: 'Location', value: 'Bengaluru, India', color: 'text-accent-600 dark:text-accent-400' },
+    { icon: FaGraduationCap, label: 'Education', value: 'B.Tech CSE', color: 'text-success-600 dark:text-success-400' },
+    { icon: FaMobile, label: 'Specialty', value: 'Flutter, Android, iOS', color: 'text-warning-600 dark:text-warning-400' },
   ];
 
   const skills = [
@@ -20,8 +20,8 @@ const About: React.FC = () => {
   return (
     <section id="about" className="section-padding relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent-500/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary-500/10 dark:bg-primary-500/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent-500/10 dark:bg-accent-500/5 rounded-full blur-3xl"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
@@ -36,16 +36,16 @@ const About: React.FC = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
             viewport={{ once: true }}
-            className="inline-flex items-center space-x-2 px-6 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-sm text-gray-300 mb-6"
+            className="inline-flex items-center space-x-2 px-6 py-3 bg-white/60 dark:bg-white/5 backdrop-blur-sm border border-slate-200 dark:border-white/10 rounded-full text-sm text-slate-600 dark:text-gray-300 shadow-sm dark:shadow-none mb-6"
           >
-            <FaUser className="text-primary-400" />
+            <FaUser className="text-primary-600 dark:text-primary-400" />
             <span>About Me</span>
           </motion.div>
           
           <h2 className="text-5xl md:text-6xl font-bold font-display mb-6">
             <span className="gradient-text">Who I Am</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-600 dark:text-gray-400 max-w-3xl mx-auto">
             A Mobile Software Engineer specializing in high-performance Flutter applications and scalable FinTech platforms.
           </p>
         </motion.div>
@@ -60,11 +60,11 @@ const About: React.FC = () => {
             className="space-y-8"
           >
             <div className="space-y-6">
-              <h3 className="text-3xl font-bold text-white mb-6">
+              <h3 className="text-3xl font-bold text-slate-800 dark:text-white mb-6">
                 My Journey
               </h3>
               
-              <div className="space-y-4 text-gray-300 leading-relaxed">
+              <div className="space-y-4 text-slate-600 dark:text-gray-300 leading-relaxed">
                 <p>
                   I'm a Mobile Software Engineer with over 3 years of experience building scalable applications 
                   that solve complex problems. Currently, I work as an SDE-1 at Jai Kisan, developing robust 
@@ -97,8 +97,8 @@ const About: React.FC = () => {
                   className="glass-effect rounded-xl p-4 text-center"
                 >
                   <fact.icon className={`mx-auto mb-2 ${fact.color}`} size={24} />
-                  <div className="text-sm text-gray-400">{fact.label}</div>
-                  <div className="font-semibold text-white">{fact.value}</div>
+                  <div className="text-sm text-slate-500 dark:text-gray-400">{fact.label}</div>
+                  <div className="font-semibold text-slate-800 dark:text-white mt-1">{fact.value}</div>
                 </motion.div>
               ))}
             </div>
@@ -114,8 +114,8 @@ const About: React.FC = () => {
           >
             {/* What I Do */}
             <div className="glass-effect-strong rounded-2xl p-8">
-              <h4 className="text-2xl font-bold text-white mb-6 flex items-center">
-                <FaLightbulb className="text-primary-400 mr-3" />
+              <h4 className="text-2xl font-bold text-slate-800 dark:text-white mb-6 flex items-center">
+                <FaLightbulb className="text-primary-600 dark:text-primary-400 mr-3" />
                 What I Do
               </h4>
               <ul className="space-y-4">
@@ -132,7 +132,7 @@ const About: React.FC = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1, duration: 0.5 }}
                     viewport={{ once: true }}
-                    className="flex items-start space-x-3 text-gray-300"
+                    className="flex items-start space-x-3 text-slate-700 dark:text-gray-300"
                   >
                     <div className="w-2 h-2 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full mt-2 flex-shrink-0"></div>
                     <span>{item}</span>
@@ -153,8 +153,8 @@ const About: React.FC = () => {
                   className="glass-effect rounded-xl p-6 text-center card-hover"
                 >
                   <div className="text-3xl mb-3">{skill.icon}</div>
-                  <h5 className="font-semibold text-white mb-2">{skill.name}</h5>
-                  <p className="text-sm text-gray-400">{skill.description}</p>
+                  <h5 className="font-semibold text-slate-800 dark:text-white mb-2">{skill.name}</h5>
+                  <p className="text-sm text-slate-500 dark:text-gray-400">{skill.description}</p>
                 </motion.div>
               ))}
             </div>

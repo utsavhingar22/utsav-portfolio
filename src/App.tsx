@@ -11,9 +11,9 @@ import Footer from './components/Footer';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-dark-950 via-dark-900 to-dark-800 text-white noise-bg">
+    <div className="min-h-screen bg-slate-50 text-slate-800 dark:bg-dark-950 dark:text-gray-100 transition-colors duration-500 noise-bg font-sans selection:bg-primary-500/30 selection:text-primary-900 dark:selection:bg-primary-500/30 dark:selection:text-white">
       <Header />
-      <main>
+      <main className="relative z-10">
         <Hero />
         <About />
         <Experience />

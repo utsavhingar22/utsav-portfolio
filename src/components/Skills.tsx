@@ -58,8 +58,8 @@ const Skills: React.FC = () => {
   return (
     <section id="skills" className="section-padding relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-accent-500/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/10 dark:bg-primary-500/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-accent-500/10 dark:bg-accent-500/5 rounded-full blur-3xl"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
@@ -74,16 +74,16 @@ const Skills: React.FC = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
             viewport={{ once: true }}
-            className="inline-flex items-center space-x-2 px-6 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-sm text-gray-300 mb-6"
+            className="inline-flex items-center space-x-2 px-6 py-3 bg-white/60 dark:bg-white/5 backdrop-blur-sm border border-slate-200 dark:border-white/10 rounded-full text-sm text-slate-700 dark:text-gray-300 shadow-sm dark:shadow-none mb-6"
           >
-            <FaCode className="text-primary-400" />
+            <FaCode className="text-primary-600 dark:text-primary-400" />
             <span>Skills</span>
           </motion.div>
           
           <h2 className="text-5xl md:text-6xl font-bold font-display mb-6">
             <span className="gradient-text">Skills & Expertise</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-600 dark:text-gray-400 max-w-3xl mx-auto">
             Technologies and tools I work with to bring ideas to life
           </p>
         </motion.div>
@@ -96,7 +96,7 @@ const Skills: React.FC = () => {
           viewport={{ once: true }}
           className="flex justify-center mb-12"
         >
-          <div className="glass-effect rounded-2xl p-2">
+          <div className="glass-effect rounded-2xl p-2 flex flex-wrap justify-center gap-2">
             {skillCategories.map((category, index) => (
               <motion.button
                 key={category.id}
@@ -106,7 +106,7 @@ const Skills: React.FC = () => {
                 className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 flex items-center space-x-2 ${
                   activeCategory === category.id
                     ? 'bg-gradient-to-r from-primary-500 to-accent-500 text-white shadow-glow'
-                    : 'text-gray-300 hover:text-white hover:bg-white/5'
+                    : 'text-slate-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5'
                 }`}
               >
                 <category.icon size={18} />
@@ -137,7 +137,7 @@ const Skills: React.FC = () => {
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center space-x-3">
                     <div 
-                      className="w-10 h-10 rounded-lg flex items-center justify-center"
+                      className="w-10 h-10 rounded-lg flex items-center justify-center bg-white dark:bg-transparent shadow-sm dark:shadow-none"
                       style={{ backgroundColor: `${skill.color}20` }}
                     >
                       <skill.icon 
@@ -146,8 +146,8 @@ const Skills: React.FC = () => {
                       />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-white">{skill.name}</h4>
-                      <p className="text-sm text-gray-400">Expert Level</p>
+                      <h4 className="font-semibold text-slate-800 dark:text-white">{skill.name}</h4>
+                      <p className="text-sm text-slate-500 dark:text-gray-400">Expert Level</p>
                     </div>
                   </div>
                   <span className="text-lg font-bold gradient-text">{skill.level}%</span>
@@ -176,7 +176,7 @@ const Skills: React.FC = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h3 className="text-3xl font-bold text-white mb-8">
+          <h3 className="text-3xl font-bold text-slate-800 dark:text-white mb-8">
             Additional Skills & Competencies
           </h3>
           <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
@@ -187,7 +187,7 @@ const Skills: React.FC = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.05, duration: 0.3 }}
                 viewport={{ once: true }}
-                className="px-4 py-2 bg-white/5 backdrop-blur-sm border border-white/10 text-gray-300 rounded-xl text-sm hover:bg-white/10 hover:border-white/20 transition-all duration-300 cursor-default"
+                className="px-4 py-2 bg-white/80 dark:bg-white/5 backdrop-blur-sm border border-slate-200 dark:border-white/10 text-slate-700 dark:text-gray-300 rounded-xl text-sm hover:bg-white dark:hover:bg-white/10 hover:border-slate-300 dark:hover:border-white/20 transition-all duration-300 cursor-default shadow-sm dark:shadow-none"
               >
                 {skill}
               </motion.span>
@@ -217,4 +217,4 @@ const Skills: React.FC = () => {
   );
 };
 
-export default Skills; 
+export default Skills;

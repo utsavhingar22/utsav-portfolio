@@ -9,7 +9,7 @@ const Achievements: React.FC = () => {
       organization: "Jai Kisan",
       description: "Awarded Best Overall Prototype for building an Early Warning System, a generative AI-powered solution to detect potential financial risk signals in advance.",
       icon: FaTrophy,
-      color: "text-warning-400",
+      color: "text-warning-500 dark:text-warning-400",
       bg: "bg-warning-500/20"
     },
     {
@@ -17,7 +17,7 @@ const Achievements: React.FC = () => {
       organization: "Summer Analytics'24, IIT Guwahati",
       description: "Ranked in the top echelon of a highly competitive national level analytics and data science competition.",
       icon: FaStar,
-      color: "text-primary-400",
+      color: "text-primary-600 dark:text-primary-400",
       bg: "bg-primary-500/20"
     },
     {
@@ -25,7 +25,7 @@ const Achievements: React.FC = () => {
       organization: "CodeKaze’23, Coding Ninjas",
       description: "Secured All India Rank 102 in one of India’s largest coding competitions.",
       icon: FaMedal,
-      color: "text-accent-400",
+      color: "text-accent-600 dark:text-accent-400",
       bg: "bg-accent-500/20"
     },
     {
@@ -33,7 +33,7 @@ const Achievements: React.FC = () => {
       organization: "CIT, Internship Studio",
       description: "Secured an exceptional national ranking for technical aptitude and problem-solving.",
       icon: FaMedal,
-      color: "text-success-400",
+      color: "text-success-600 dark:text-success-400",
       bg: "bg-success-500/20"
     },
     {
@@ -41,7 +41,7 @@ const Achievements: React.FC = () => {
       organization: "TCS (2023)",
       description: "Successfully cleared the National Qualifier Test showcasing strong cognitive and programming skills.",
       icon: FaStar,
-      color: "text-primary-400",
+      color: "text-primary-600 dark:text-primary-400",
       bg: "bg-primary-500/20"
     },
     {
@@ -49,14 +49,14 @@ const Achievements: React.FC = () => {
       organization: "Tally CodeBrewers 2022",
       description: "Emerged as a top 12 finalist in a rigorous full stack development hackathon hosted by Tally.",
       icon: FaTrophy,
-      color: "text-warning-400",
+      color: "text-warning-500 dark:text-warning-400",
       bg: "bg-warning-500/20"
     }
   ];
 
   return (
     <section id="achievements" className="section-padding relative overflow-hidden">
-      <div className="absolute top-1/2 left-1/4 w-80 h-80 bg-warning-500/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/2 left-1/4 w-80 h-80 bg-warning-500/10 dark:bg-warning-500/5 rounded-full blur-3xl"></div>
       
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
@@ -71,9 +71,9 @@ const Achievements: React.FC = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
             viewport={{ once: true }}
-            className="inline-flex items-center space-x-2 px-6 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-sm text-gray-300 mb-6"
+            className="inline-flex items-center space-x-2 px-6 py-3 bg-white/60 dark:bg-white/5 backdrop-blur-sm border border-slate-200 dark:border-white/10 rounded-full text-sm text-slate-700 dark:text-gray-300 shadow-sm dark:shadow-none mb-6"
           >
-            <FaTrophy className="text-warning-400" />
+            <FaTrophy className="text-warning-500 dark:text-warning-400" />
             <span>Highlights</span>
           </motion.div>
           
@@ -92,13 +92,13 @@ const Achievements: React.FC = () => {
               viewport={{ once: true }}
               className="glass-effect rounded-2xl p-6 hover:-translate-y-2 transition-transform duration-300 cursor-default"
             >
-              <div className={`w-14 h-14 rounded-xl ${item.bg} flex items-center justify-center mb-6`}>
+              <div className={`w-14 h-14 rounded-xl ${item.bg} flex items-center justify-center mb-6 shadow-sm dark:shadow-none`}>
                 <item.icon className={`text-2xl ${item.color}`} />
               </div>
               
-              <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
-              <div className="text-sm font-semibold text-primary-300 mb-4">{item.organization}</div>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-2">{item.title}</h3>
+              <div className="text-sm font-semibold text-primary-600 dark:text-primary-300 mb-4">{item.organization}</div>
+              <p className="text-slate-600 dark:text-gray-400 text-sm leading-relaxed">
                 {item.description}
               </p>
             </motion.div>

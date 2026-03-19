@@ -23,7 +23,7 @@ const Education: React.FC = () => {
   return (
     <section id="education" className="section-padding relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary-500/10 dark:bg-primary-500/5 rounded-full blur-3xl"></div>
       
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
@@ -38,9 +38,9 @@ const Education: React.FC = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
             viewport={{ once: true }}
-            className="inline-flex items-center space-x-2 px-6 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-sm text-gray-300 mb-6"
+            className="inline-flex items-center space-x-2 px-6 py-3 bg-white/60 dark:bg-white/5 backdrop-blur-sm border border-slate-200 dark:border-white/10 rounded-full text-sm text-slate-700 dark:text-gray-300 shadow-sm dark:shadow-none mb-6"
           >
-            <FaGraduationCap className="text-primary-400" />
+            <FaGraduationCap className="text-primary-600 dark:text-primary-400" />
             <span>Education & Certifications</span>
           </motion.div>
           
@@ -58,24 +58,24 @@ const Education: React.FC = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h3 className="text-3xl font-bold text-white flex items-center">
-              <FaUniversity className="text-primary-400 mr-4" />
+            <h3 className="text-3xl font-bold text-slate-800 dark:text-white flex items-center">
+              <FaUniversity className="text-primary-600 dark:text-primary-400 mr-4" />
               Education
             </h3>
             
             {educationData.map((edu, index) => (
               <div key={index} className="glass-effect-strong rounded-2xl p-8 card-hover">
-                <h4 className="text-2xl font-bold text-white mb-2">{edu.degree}</h4>
-                <div className="text-primary-300 font-medium mb-4">{edu.institution}</div>
+                <h4 className="text-2xl font-bold text-slate-800 dark:text-white mb-2">{edu.degree}</h4>
+                <div className="text-primary-600 dark:text-primary-300 font-medium mb-4">{edu.institution}</div>
                 
-                <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-6 text-gray-400">
+                <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-6 text-slate-600 dark:text-gray-400">
                   <div className="flex items-center space-x-2">
                     <FaCalendarAlt />
                     <span>{edu.period}</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <FaAward className="text-warning-400" />
-                    <span className="text-white font-semibold">{edu.grade}</span>
+                    <FaAward className="text-warning-500 dark:text-warning-400" />
+                    <span className="text-slate-800 dark:text-white font-semibold">{edu.grade}</span>
                   </div>
                 </div>
               </div>
@@ -90,12 +90,12 @@ const Education: React.FC = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h3 className="text-3xl font-bold text-white flex items-center">
-              <FaCertificate className="text-accent-400 mr-4" />
+            <h3 className="text-3xl font-bold text-slate-800 dark:text-white flex items-center">
+              <FaCertificate className="text-accent-600 dark:text-accent-400 mr-4" />
               Certifications
             </h3>
             
-            <div className="glass-effect rounded-2xl p-8">
+            <div className="glass-effect rounded-2xl p-8 bg-white/40 dark:bg-white/5">
               <ul className="space-y-4">
                 {certificates.map((cert, index) => (
                   <motion.li
@@ -104,13 +104,13 @@ const Education: React.FC = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1, duration: 0.5 }}
                     viewport={{ once: true }}
-                    className="flex items-start space-x-4 p-4 hover:bg-white/5 rounded-xl transition-colors duration-300"
+                    className="flex items-start space-x-4 p-4 hover:bg-white/60 dark:hover:bg-white/5 rounded-xl transition-colors duration-300 shadow-sm dark:shadow-none bg-white/20 dark:bg-transparent"
                   >
-                    <div className="w-10 h-10 rounded-full bg-accent-500/20 flex items-center justify-center flex-shrink-0 mt-1">
-                      <FaAward className="text-accent-400" />
+                    <div className="w-10 h-10 rounded-full bg-accent-100 dark:bg-accent-500/20 flex items-center justify-center flex-shrink-0 mt-1 shadow-inner dark:shadow-none">
+                      <FaAward className="text-accent-600 dark:text-accent-400" />
                     </div>
                     <div>
-                      <div className="text-white font-medium text-lg">{cert}</div>
+                      <div className="text-slate-800 dark:text-white font-medium text-lg">{cert}</div>
                     </div>
                   </motion.li>
                 ))}

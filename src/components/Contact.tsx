@@ -65,28 +65,28 @@ const Contact: React.FC = () => {
       icon: FaLinkedin,
       name: 'LinkedIn',
       url: 'https://www.linkedin.com/in/utsavhingar22',
-      color: 'hover:bg-blue-600'
+      color: 'hover:bg-blue-600 hover:text-white'
     },
     {
       icon: FaGithub,
       name: 'GitHub',
       url: 'https://github.com/utsavhingar22',
-      color: 'hover:bg-gray-700'
+      color: 'hover:bg-gray-800 dark:hover:bg-gray-700 hover:text-white'
     },
     {
       icon: FaCode,
       name: 'LeetCode',
       url: 'https://leetcode.com/utsavhingar22',
-      color: 'hover:bg-yellow-500'
+      color: 'hover:bg-yellow-500 hover:text-white'
     }
   ];
 
   return (
     <section id="contact" className="section-padding relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-accent-500/5 rounded-full blur-3xl"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-success-500/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary-500/10 dark:bg-primary-500/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-accent-500/10 dark:bg-accent-500/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-success-500/10 dark:bg-success-500/5 rounded-full blur-3xl"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
@@ -101,16 +101,16 @@ const Contact: React.FC = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
             viewport={{ once: true }}
-            className="inline-flex items-center space-x-2 px-6 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-sm text-gray-300 mb-6"
+            className="inline-flex items-center space-x-2 px-6 py-3 bg-white/60 dark:bg-white/5 backdrop-blur-sm border border-slate-200 dark:border-white/10 rounded-full text-sm text-slate-700 dark:text-gray-300 shadow-sm dark:shadow-none mb-6"
           >
-            <FaEnvelope className="text-primary-400" />
+            <FaEnvelope className="text-primary-600 dark:text-primary-400" />
             <span>Contact</span>
           </motion.div>
           
           <h2 className="text-5xl md:text-6xl font-bold font-display mb-6">
             <span className="gradient-text">Let's Connect</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-600 dark:text-gray-400 max-w-3xl mx-auto">
             Ready to collaborate on your next project? I'd love to hear from you!
           </p>
         </motion.div>
@@ -125,8 +125,8 @@ const Contact: React.FC = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
-              <p className="text-gray-400 text-lg leading-relaxed mb-8">
+              <h3 className="text-2xl font-bold text-slate-800 dark:text-white mb-6">Get in Touch</h3>
+              <p className="text-slate-600 dark:text-gray-400 text-lg leading-relaxed mb-8">
                 I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology and innovation.
               </p>
             </div>
@@ -144,12 +144,12 @@ const Contact: React.FC = () => {
                   whileHover={{ scale: 1.02, x: 5 }}
                   className="glass-effect rounded-2xl p-6 flex items-center space-x-4 group cursor-pointer"
                 >
-                  <div className={`p-4 rounded-xl bg-gradient-to-r ${info.color} group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`p-4 rounded-xl bg-gradient-to-r ${info.color} group-hover:scale-110 transition-transform duration-300 shadow-sm dark:shadow-none`}>
                     <info.icon className="text-white text-xl" />
                   </div>
                   <div>
-                    <h4 className="text-white font-semibold mb-1">{info.title}</h4>
-                    <p className="text-gray-400 group-hover:text-white transition-colors duration-200">{info.value}</p>
+                    <h4 className="text-slate-800 dark:text-white font-semibold mb-1">{info.title}</h4>
+                    <p className="text-slate-600 dark:text-gray-400 group-hover:text-slate-900 dark:group-hover:text-white transition-colors duration-200">{info.value}</p>
                   </div>
                 </motion.a>
               ))}
@@ -157,7 +157,7 @@ const Contact: React.FC = () => {
 
             {/* Social Links */}
             <div>
-              <h4 className="text-xl font-semibold text-white mb-4">Follow Me</h4>
+              <h4 className="text-xl font-semibold text-slate-800 dark:text-white mb-4">Follow Me</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
@@ -171,7 +171,7 @@ const Contact: React.FC = () => {
                     viewport={{ once: true }}
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    className={`p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 text-gray-300 hover:text-white transition-all duration-300 ${social.color}`}
+                    className={`p-4 rounded-xl bg-white/80 dark:bg-white/5 backdrop-blur-sm border border-slate-200 dark:border-white/10 text-slate-600 dark:text-gray-300 transition-all duration-300 shadow-sm dark:shadow-none ${social.color}`}
                   >
                     <social.icon size={20} />
                   </motion.a>
@@ -194,17 +194,17 @@ const Contact: React.FC = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 className="text-center py-12"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-success-500/20 rounded-full mb-6">
-                  <FaCheckCircle className="text-success-400 text-2xl" />
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-success-100 dark:bg-success-500/20 rounded-full mb-6 relative">
+                  <FaCheckCircle className="text-success-600 dark:text-success-400 text-3xl" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-                <p className="text-gray-400">Thank you for reaching out. I'll get back to you soon!</p>
+                <h3 className="text-2xl font-bold text-slate-800 dark:text-white mb-2">Message Sent!</h3>
+                <p className="text-slate-600 dark:text-gray-400">Thank you for reaching out. I'll get back to you soon!</p>
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-gray-300 mb-2">
                       Name
                     </label>
                     <input
@@ -214,12 +214,12 @@ const Contact: React.FC = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
+                      className="w-full px-4 py-3 bg-white/60 dark:bg-white/5 backdrop-blur-sm border border-slate-200 dark:border-white/10 rounded-xl text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 shadow-sm dark:shadow-none"
                       placeholder="Your name"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-gray-300 mb-2">
                       Email
                     </label>
                     <input
@@ -229,14 +229,14 @@ const Contact: React.FC = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
+                      className="w-full px-4 py-3 bg-white/60 dark:bg-white/5 backdrop-blur-sm border border-slate-200 dark:border-white/10 rounded-xl text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 shadow-sm dark:shadow-none"
                       placeholder="your.email@example.com"
                     />
                   </div>
                 </div>
                 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="subject" className="block text-sm font-medium text-slate-700 dark:text-gray-300 mb-2">
                     Subject
                   </label>
                   <input
@@ -246,13 +246,13 @@ const Contact: React.FC = () => {
                     value={formData.subject}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
+                    className="w-full px-4 py-3 bg-white/60 dark:bg-white/5 backdrop-blur-sm border border-slate-200 dark:border-white/10 rounded-xl text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 shadow-sm dark:shadow-none"
                     placeholder="What's this about?"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-slate-700 dark:text-gray-300 mb-2">
                     Message
                   </label>
                   <textarea
@@ -262,7 +262,7 @@ const Contact: React.FC = () => {
                     onChange={handleInputChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 resize-none"
+                    className="w-full px-4 py-3 bg-white/60 dark:bg-white/5 backdrop-blur-sm border border-slate-200 dark:border-white/10 rounded-xl text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 resize-none shadow-sm dark:shadow-none"
                     placeholder="Tell me about your project..."
                   />
                 </div>
@@ -276,7 +276,7 @@ const Contact: React.FC = () => {
                 >
                   {isSubmitting ? (
                     <>
-                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                      <div className="w-5 h-5 border-2 border-white/60 dark:border-white/30 border-t-white rounded-full animate-spin"></div>
                       <span>Sending...</span>
                     </>
                   ) : (
@@ -295,4 +295,4 @@ const Contact: React.FC = () => {
   );
 };
 
-export default Contact; 
+export default Contact;

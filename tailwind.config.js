@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -12,11 +13,11 @@ module.exports = {
           200: '#a5f3fc',
           300: '#67e8f9',
           400: '#22d3ee',
-          500: '#06b6d4',
-          600: '#0891b2',
-          700: '#0e7490',
-          800: '#155e75',
-          900: '#164e63',
+          500: '#0ea5e9', // Deepened slightly for better light contrast
+          600: '#0284c7',
+          700: '#0369a1',
+          800: '#075985',
+          900: '#0c4a6e',
         },
         accent: {
           50: '#f5f3ff',
@@ -114,23 +115,25 @@ module.exports = {
           '50%': { transform: 'translateY(-20px)' },
         },
         glow: {
-          '0%': { boxShadow: '0 0 20px rgba(6, 182, 212, 0.3)' },
-          '100%': { boxShadow: '0 0 30px rgba(6, 182, 212, 0.6)' },
+          '0%': { boxShadow: '0 0 20px rgba(14, 165, 233, 0.3)' },
+          '100%': { boxShadow: '0 0 30px rgba(14, 165, 233, 0.6)' },
         },
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'mesh-gradient': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-        'hero-gradient': 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)',
+        'mesh-gradient-light': 'linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%)',
+        'mesh-gradient-dark': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        'hero-gradient-light': 'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%)',
+        'hero-gradient-dark': 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)',
       },
       backdropBlur: {
         xs: '2px',
       },
       boxShadow: {
-        'glow': '0 0 20px rgba(6, 182, 212, 0.3)',
-        'glow-lg': '0 0 40px rgba(6, 182, 212, 0.4)',
-        'inner-glow': 'inset 0 0 20px rgba(6, 182, 212, 0.1)',
+        'glow': '0 0 20px rgba(14, 165, 233, 0.3)',
+        'glow-lg': '0 0 40px rgba(14, 165, 233, 0.4)',
+        'inner-glow': 'inset 0 0 20px rgba(14, 165, 233, 0.1)',
       }
     },
   },
