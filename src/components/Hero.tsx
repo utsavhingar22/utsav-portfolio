@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaArrowDown, FaRocket, FaCode } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaArrowDown, FaRocket, FaCode } from 'react-icons/fa';
 
 const Hero: React.FC = () => {
   const socialLinks = [

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt, FaStar, FaCode, FaDatabase, FaMobile, FaCloud, FaRocket } from 'react-icons/fa';
+import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt, FaStar } from 'react-icons/fa';
 
 const Experience: React.FC = () => {
   const experiences = [

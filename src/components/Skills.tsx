@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  FaReact, FaJs, FaHtml5, FaCss3Alt, FaNodeJs, FaGitAlt, 
-  FaDocker, FaAws, FaDatabase, FaFigma, FaCode, FaTools, FaServer, FaMobileAlt, FaAndroid, FaApple
+  FaNodeJs, FaGitAlt, FaAws, FaDatabase, FaCode, FaTools, FaServer, FaMobileAlt, FaAndroid, FaApple
 } from 'react-icons/fa';
-import { SiTypescript, SiMongodb, SiPostgresql, SiTailwindcss, SiNextdotjs, SiRedux, SiJest, SiFlutter, SiDart, SiFirebase, SiPython, SiKotlin, SiSwift, SiFastapi, SiDjango } from 'react-icons/si';
+import { SiFlutter, SiDart, SiFirebase, SiPython, SiKotlin, SiSwift, SiFastapi, SiDjango } from 'react-icons/si';
 
 const Skills: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('mobile');

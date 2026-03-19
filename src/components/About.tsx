@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaUser, FaGraduationCap, FaBriefcase, FaMapMarkerAlt, FaCalendarAlt, FaCode, FaDatabase, FaMobile, FaCloud, FaHeart, FaLightbulb } from 'react-icons/fa';
+import { FaUser, FaGraduationCap, FaMapMarkerAlt, FaMobile, FaLightbulb } from 'react-icons/fa';
 
 const About: React.FC = () => {
   const quickFacts = [
