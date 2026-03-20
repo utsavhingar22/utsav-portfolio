@@ -149,7 +149,7 @@ const Hero: React.FC = () => {
             {[
               { number: '3+', label: 'Years Experience' },
               { number: '150K+', label: 'App Downloads' },
-              { number: '1000+', label: 'APIs Integrated' },
+              { number: '100+', label: 'APIs Integrated' },
             ].map((stat, index) => (
               <motion.div
                 key={index}
