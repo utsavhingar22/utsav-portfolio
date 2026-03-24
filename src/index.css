@@ -58,11 +58,17 @@
   }
 
   .card-hover {
-    @apply transition-all duration-500 hover:scale-[1.03] hover:shadow-glow hover:shadow-primary-500/20 dark:hover:shadow-glow dark:hover:shadow-primary-500/20;
+    @apply transition-all duration-500 hover:scale-[1.03] hover:shadow-primary-500/20 dark:hover:shadow-primary-500/20;
+  }
+  .card-hover:hover {
+    @apply shadow-glow;
   }
 
   .card-hover-strong {
-    @apply transition-all duration-500 hover:scale-110 hover:shadow-glow-lg hover:shadow-primary-500/30 dark:hover:shadow-glow-lg dark:hover:shadow-primary-500/30;
+    @apply transition-all duration-500 hover:scale-110 hover:shadow-primary-500/30 dark:hover:shadow-primary-500/30;
+  }
+  .card-hover-strong:hover {
+    @apply shadow-glow-lg;
   }
 
   .section-padding {
